@@ -1,7 +1,7 @@
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { API_OPTIONS } from "../utils/constants";
 import { addtrailerVideo } from "../utils/movieSlice";
-import { useEffect } from "react";
 
 const useMovietrailer = (movieId) => {
   const dispatch = useDispatch();
@@ -14,10 +14,16 @@ const useMovietrailer = (movieId) => {
     );
     const json = await data.json();
 
-    const filterData = json.results.filter((video) => video.type === "Trailer");
-    const trailer = filterData.length ? filterData[0] : json.results[0];
-
-    dispatch(addtrailerVideo(trailer));
+    if (json.results && Array.isArray(json.results)) {
+      const filterData = json.results.filter(
+        (video) => video.type === "Trailer"
+      );
+      const trailer = filterData.length ? filterData[0] : json.results[0];
+      dispatch(addtrailerVideo(trailer));
+    } else {
+      console.error("json.results is undefined or not an array.");
+      // Handle the error or provide a default action
+    }
   };
 
   useEffect(() => {
