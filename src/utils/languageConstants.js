@@ -1,5 +1,3 @@
-// import GptSearchBar from "../components/GptSearchBar";
-
 const lang = {
   en: {
     search: "Search",
