@@ -1,3 +1,6 @@
+
+Deployed Link: https://netflix-five-orcin.vercel.app/
+
 # Netflix GPT
 
 - Created React App
