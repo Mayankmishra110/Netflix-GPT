@@ -1,5 +1,5 @@
 
-Deployed Link: [Live](https://netflix-gpt-major-project.netlify.app/browser)
+Deployed Link: [Live](https://netflix-gpt-major-project.netlify.app)
 
 # Netflix GPT
 
