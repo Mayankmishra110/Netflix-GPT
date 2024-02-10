@@ -1,5 +1,5 @@
 
-Deployed Link: [Live](https://netflix-gpt-major-project.netlify.app)
+Deployed Link: [Live](https://netflix-five-orcin.vercel.app/)
 
 # Netflix GPT
 
